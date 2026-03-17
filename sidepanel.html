@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TimeDock</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app" class="app">
+    <header class="app-header">
+      <h1>TimeDock</h1>
+      <p>Cross-timezone clock + converter</p>
+    </header>
+
+    <section class="panel" id="clockSection">
+      <h2>Saved Timezones</h2>
+      <div id="clockCards" class="clock-grid"></div>
+    </section>
+
+    <section class="panel" id="converterSection">
+      <h2>Quick Converter</h2>
+      <div class="converter-controls">
+        <label>
+          Time
+          <input id="timeInput" type="text" placeholder="9:00 PM" />
+        </label>
+        <label>
+          Source timezone
+          <select id="sourceTimezone"></select>
+        </label>
+        <button id="convertBtn" type="button">Convert</button>
+      </div>
+      <p id="converterError" class="error"></p>
+      <div id="conversionResults" class="results"></div>
+      <div class="copy-row">
+        <button id="copyTemplateSimple" type="button">Copy short template</button>
+        <button id="copyTemplateDetailed" type="button">Copy detailed template</button>
+        <span id="copyStatus" class="muted"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="overlapSection">
+      <h2>Overlap Strip</h2>
+      <label>
+        Client timezone
+        <select id="clientTimezone"></select>
+      </label>
+      <div id="overlapInfo" class="overlap"></div>
+    </section>
+
+    <section class="panel" id="settingsSection">
+      <h2>Settings</h2>
+      <div class="settings-grid">
+        <label>
+          Home timezone
+          <select id="homeTimezone"></select>
+        </label>
+        <label>
+          Time format
+          <select id="timeFormat">
+            <option value="12h">12h</option>
+            <option value="24h">24h</option>
+          </select>
+        </label>
+        <label class="checkbox-row">
+          <input id="compactMode" type="checkbox" />
+          Compact mode
+        </label>
+      </div>
+
+      <h3>Manage saved timezones</h3>
+      <div class="timezone-editor">
+        <input id="timezoneInput" type="text" placeholder="America/Chicago or PST" />
+        <button id="addTimezoneBtn" type="button">Add</button>
+      </div>
+      <p id="settingsError" class="error"></p>
+      <ul id="timezoneList" class="timezone-list"></ul>
+    </section>
+  </main>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
