@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "TimeDock",
+  "description": "Quickly view multi-timezone clocks and convert meeting times from the Chrome side panel.",
+  "version": "0.1.0",
+  "permissions": ["sidePanel", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open TimeDock"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}
