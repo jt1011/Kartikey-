@@ -61,3 +61,178 @@ button.primary { background: linear-gradient(180deg, #28b8e4, #149bc4); border: 
 .error { color: var(--danger); font-size: .78rem; min-height: 1em; margin: 6px 0; }
 .compact .panel { padding: 9px; }
 .compact .clock-time { font-size: 1.04rem; }
+  color-scheme: light dark;
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --accent: #22d3ee;
+  --ok: #4ade80;
+  --warn: #f59e0b;
+  --muted: #94a3b8;
+  --danger: #f87171;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  padding: 12px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.app-header p {
+  margin: 2px 0 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.panel {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+h3 {
+  margin: 12px 0 8px;
+  font-size: 0.9rem;
+}
+
+.clock-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.clock-card {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.clock-time {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.rollover,
+.work-status,
+.tz-id {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.work-status.in {
+  color: var(--ok);
+}
+
+.work-status.out {
+  color: var(--warn);
+}
+
+.converter-controls,
+.settings-grid {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.84rem;
+}
+
+input,
+select,
+button {
+  border-radius: 6px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text);
+  padding: 7px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.results {
+  margin-top: 8px;
+  display: grid;
+  gap: 6px;
+}
+
+.result-item {
+  font-size: 0.84rem;
+  padding: 6px;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.copy-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.overlap {
+  font-size: 0.84rem;
+  display: grid;
+  gap: 4px;
+}
+
+.timezone-editor {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+}
+
+.timezone-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: grid;
+  gap: 6px;
+}
+
+.timezone-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 4px;
+  align-items: center;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.error {
+  color: var(--danger);
+  min-height: 1em;
+  margin: 6px 0;
+  font-size: 0.78rem;
+}
+
+.compact .panel {
+  padding: 8px;
+}
+
+.compact .clock-time {
+  font-size: 1.05rem;
+}
