@@ -1,12 +1,14 @@
-# TimeDock (MVP)
+# TimeDock V2.0
 
-TimeDock is a Manifest V3 Chrome extension that runs inside the Side Panel and provides:
+TimeDock is a Manifest V3 Chrome extension that runs inside the Side Panel and provides a compact timezone command center for distributed work.
 
-- Saved timezone cards
-- Quick time conversion from one source timezone to all saved zones
-- Basic overlap strip between home and client schedules
-- Alias helper support (`PST`, `EST`, `UTC`, etc.)
-- Local-first settings persisted in `chrome.storage.local`
+## What changed in V2.0
+
+- Refreshed side-panel UI with a hero summary, dashboard/converter/settings tabs, and a stronger visual system
+- Upgraded timezone cards with rollover labels, GMT offsets, and work-hour status chips
+- Rebuilt the overlap section with a visual timeline strip and richer shared-window summaries
+- Polished the converter with card-based outputs and copy-ready templates for quick sharing
+- Kept the extension local-first with `chrome.storage.local` persistence and zero external API dependencies
 
 ## Load locally
 
@@ -20,6 +22,6 @@ TimeDock is a Manifest V3 Chrome extension that runs inside the Side Panel and p
 
 - `manifest.json` — MV3 config and permissions
 - `background.js` — side panel action behavior
-- `sidepanel.html` — UI structure
-- `styles.css` — panel styling and compact mode
-- `sidepanel.js` — timezone rendering, conversion, overlap, settings persistence
+- `sidepanel.html` — V2.0 side-panel structure
+- `styles.css` — visual system, layout, timeline, and compact mode styling
+- `sidepanel.js` — timezone rendering, conversion, overlap, tabs, and settings persistence
